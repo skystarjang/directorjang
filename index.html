@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIRECTOR JANG — 장형택 | Film Director & Cinematographer</title>
+<meta name="description" content="장형택 감독 — 영상 감독 & 시네마토그래퍼. K-Pop, 다큐멘터리, 브랜드 필름, 광고 영상 제작.">
+<meta property="og:title" content="DIRECTOR JANG — 장형택">
+<meta property="og:description" content="Mastering the spectrum of K-content — Direction and Cinematography connecting local stories to the global stage.">
+<meta property="og:image" content="https://img.youtube.com/vi/6GTM1wuA43o/maxresdefault.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   DIRECTOR JANG — Portfolio
+   Design: Cinematic Minimal Dark
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  --bg: #000000;
+  --bg-card: #0a0a0a;
+  --fg: #f0ece4;
+  --fg-dim: #8a857e;
+  --accent: #c8a87c;
+  --accent-glow: rgba(200,168,124,0.15);
+  --border: #1a1a1a;
+  --border-hover: #2a2a2a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar { display: none; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Film Grain Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 10000;
+  opacity: 0.4;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ═══ PRELOADER ═══ */
+.preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--bg);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.preloader.done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-line {
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin-bottom: 24px;
+}
+
+.preloader.active .preloader-line {
+  width: 120px;
+}
+
+.preloader-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 8px;
+  color: var(--fg-dim);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s 0.4s ease, transform 0.6s 0.4s ease;
+}
+
+.preloader.active .preloader-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══ CUSTOM CURSOR ═══ */
+@media (min-width: 901px) {
+  body.custom-cursor-active,
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+.cursor-outer {
+  position: fixed;
+  width: 40px; height: 40px;
+  border: 1px solid rgba(200,168,124,0.35);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              height 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.35s, background 0.35s, mix-blend-mode 0.2s;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-outer.hovering {
+  width: 56px; height: 56px;
+  border-color: var(--accent);
+}
+
+.cursor-outer.cursor-view {
+  width: 76px;
+  height: 76px;
+  mix-blend-mode: normal;
+  background: rgba(10, 10, 10, 0.65);
+  border-color: rgba(200, 168, 124, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.cursor-view-label {
+  position: absolute;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  color: var(--fg);
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  padding-left: 0.2em;
+}
+
+.cursor-outer.cursor-view .cursor-view-label {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 4px; height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease, transform 0.05s;
+}
+
+.cursor-dot.cursor-dot-hide {
+  opacity: 0;
+}
+
+@media (max-width: 900px) {
+  .cursor-outer, .cursor-dot, .cursor-view-label { display: none !important; }
+}
+
+/* ═══ NAVIGATION ═══ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 32px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  mix-blend-mode: difference;
+}
+
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 6px;
+  color: var(--fg);
+  position: relative;
+  transition: opacity 0.35s ease;
+}
+
+.nav-logo:hover {
+  opacity: 0.78;
+}
+
+.nav-logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.45;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.nav-logo:hover::after {
+  transform: scaleX(1);
+  opacity: 0.55;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--fg);
+  position: relative;
+  transition: opacity 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover { opacity: 0.7; }
+
+/* Mobile Menu */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 200;
+  background: none;
+  border: none;
+  padding: 8px;
+}
+
+.menu-btn span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--fg);
+  transition: all 0.3s;
+}
+
+.menu-btn.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.menu-btn.open span:nth-child(2) { opacity: 0; }
+.menu-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.mobile-menu {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  background: var(--bg);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 8px;
+  color: var(--fg);
+  transition: color 0.3s;
+}
+
+.mobile-menu a:hover { color: var(--accent); }
+
+/* ═══ HERO ═══ */
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 300px;
+  background: linear-gradient(transparent, var(--bg));
+  z-index: 2;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('https://img.youtube.com/vi/6GTM1wuA43o/maxresdefault.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  animation: kenBurns 25s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1%, -0.5%); }
+}
+
+.hero-vignette {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(ellipse at center, transparent 40%, var(--bg) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.hero-label {
+  font-size: 11px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 36px;
+  font-weight: 300;
+  opacity: 0;
+  animation: heroFadeUp 1s 0.8s forwards;
+}
+
+.hero-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(64px, 14vw, 180px);
+  letter-spacing: clamp(4px, 1vw, 12px);
+  line-height: 0.92;
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: heroFadeUp 1.2s 1s forwards;
+}
+
+.hero-kr {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: clamp(14px, 2vw, 24px);
+  font-weight: 100;
+  letter-spacing: 16px;
+  color: var(--fg-dim);
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: heroFadeUp 1s 1.3s forwards;
+}
+
+.hero-tag {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(13px, 1.65vw, 18px);
+  color: rgba(240, 236, 228, 0.82);
+  max-width: 36rem;
+  margin: 0 auto;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  opacity: 0;
+  animation: heroFadeUp 1s 1.6s forwards;
+}
+
+.hero-tag-line {
+  display: block;
+}
+
+.hero-tag-bar {
+  display: block;
+  width: 52px;
+  height: 1px;
+  margin: 16px auto;
+  background: linear-gradient(90deg, transparent, rgba(200, 168, 124, 0.65), transparent);
+  opacity: 0.9;
+}
+
+.hero-tag-bar + .hero-tag-line {
+  color: rgba(240, 236, 228, 0.68);
+}
+
+.scroll-ind {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  animation: heroFadeUp 1s 2s forwards;
+}
+
+.scroll-ind span {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  font-weight: 300;
+}
+
+.scroll-line {
+  width: 1px; height: 48px;
+  background: var(--border-hover);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -100%; left: 0;
+  width: 100%; height: 100%;
+  background: var(--accent);
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0% { top: -100%; }
+  50% { top: 100%; }
+  100% { top: 100%; }
+}
+
+/* ═══ SECTION HEADERS ═══ */
+.sec-head {
+  padding: 140px 48px 64px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sec-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sec-num::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.sec-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 7vw, 80px);
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.sec-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 17px;
+  color: var(--fg-dim);
+  margin-top: 16px;
+}
+
+.sec-sub--works {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(15px, 1.55vw, 19px);
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  color: rgba(240, 236, 228, 0.78);
+  max-width: 36rem;
+  margin-top: 22px;
+}
+
+/* ═══ FILMS GRID ═══ */
+.films {
+  padding: 0 48px 140px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.film-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.4s, transform 0.4s;
+}
+
+.film-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.film-card.wide { grid-column: 1 / -1; }
+
+.film-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.film-card:not(.wide) .film-thumb { padding-bottom: 56.25%; }
+.film-card.wide .film-thumb { padding-bottom: 42%; }
+
+.film-thumb-drive {
+  background: #0a0908;
+}
+
+.film-drive-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(200,168,124,0.12) 0%, transparent 55%),
+    linear-gradient(145deg, #15120e 0%, #0a0908 45%, #1a1612 100%);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s;
+  opacity: 1;
+}
+
+.film-card:hover .film-thumb-drive .film-drive-bg {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
+.film-thumb img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.65s ease;
+  filter: brightness(0.7) contrast(1.05);
+}
+
+.film-card:hover .film-thumb img {
+  transform: scale(1.035);
+  filter: brightness(0.88) contrast(1.08);
+}
+
+.film-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(transparent 30%, rgba(0,0,0,0.85) 100%);
+  z-index: 1;
+  transition: opacity 0.4s;
+}
+
+.film-play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 64px; height: 64px;
+  border: 1.5px solid rgba(240,236,228,0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.3);
+}
+
+.film-card:hover .film-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.film-play svg {
+  width: 20px; height: 20px;
+  fill: var(--fg);
+  margin-left: 3px;
+}
+
+.film-info {
+  padding: 24px 28px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.film-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.film-meta {
+  font-size: 10px;
+  color: var(--fg-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.film-arrow {
+  width: 32px; height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.film-card:hover .film-arrow {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.film-arrow svg {
+  width: 12px; height: 12px;
+  fill: none;
+  stroke: var(--fg);
+  stroke-width: 2;
+  transition: all 0.3s;
+}
+
+.film-card:hover .film-arrow svg {
+  stroke: var(--bg);
+  transform: translateX(2px);
+}
+
+.film-info.film-info-story {
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.film-info-story .film-story-block {
+  flex: 1;
+  min-width: 0;
+}
+
+.film-story-kicker {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.film-story-head {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  color: var(--fg);
+  margin-bottom: 14px;
+}
+
+.film-story-head--compact {
+  font-size: clamp(1.25rem, 2.6vw, 1.65rem);
+  line-height: 1.3;
+}
+
+.film-story-text {
+  font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--fg-dim);
+  font-weight: 300;
+  margin-bottom: 12px;
+  max-width: 56rem;
+}
+
+.film-story-text:last-child { margin-bottom: 0; }
+
+.film-story-meta {
+  font-size: 10px;
+  color: var(--fg-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.works-interlude {
+  grid-column: 1 / -1;
+  margin: clamp(24px, 4vw, 48px) 0 clamp(16px, 3vw, 32px);
+  position: relative;
+  padding: clamp(32px, 5vw, 56px) clamp(16px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(200, 168, 124, 0.04) 50%, transparent 100%),
+    linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.02) 50%, transparent);
+  border-top: 1px solid rgba(42, 42, 42, 0.9);
+  border-bottom: 1px solid rgba(42, 42, 42, 0.9);
+  border-left: 1px solid rgba(200, 168, 124, 0.16);
+  border-right: 1px solid rgba(200, 168, 124, 0.16);
+  overflow: hidden;
+}
+
+.works-interlude::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: min(120px, 28vw);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.works-interlude-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(12px, 1.35vw, 15px);
+  letter-spacing: 0.62em;
+  color: rgba(200, 168, 124, 0.92);
+  margin-bottom: clamp(18px, 2.5vw, 26px);
+  display: block;
+}
+
+.works-interlude-text {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(240, 236, 228, 0.94);
+  line-height: 1.5;
+  letter-spacing: 0.035em;
+  margin: 0;
+}
+
+.works-interlude-rule {
+  display: none;
+}
+
+/* ═══ LIGHTBOX ═══ */
+.lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.96);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  backdrop-filter: blur(20px);
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-inner {
+  width: 90%;
+  max-width: 1100px;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+
+.lightbox-inner iframe {
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 32px; right: 48px;
+  width: 48px; height: 48px;
+  cursor: pointer;
+  z-index: 9001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid rgba(240,236,228,0.2);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.lightbox-close:hover {
+  border-color: var(--accent);
+  transform: rotate(90deg);
+}
+
+.lightbox-close svg {
+  width: 16px; height: 16px;
+  stroke: var(--fg);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+/* ═══ DIVIDER ═══ */
+.divider {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.div-line {
+  height: 1px;
+  background: var(--border);
+  position: relative;
+}
+
+.div-line::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 80px; height: 1px;
+  background: var(--accent);
+}
+
+/* ═══ ABOUT ═══ */
+.about {
+  padding: 0 48px 140px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: clamp(48px, 6vw, 100px);
+  align-items: start;
+}
+
+.about-frame {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-frame::before {
+  content: '';
+  position: absolute;
+  top: 12px; left: 12px; right: 12px; bottom: 12px;
+  border: 1px solid var(--border);
+  z-index: 1;
+}
+
+
+.about-initials {
+  display: none;
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  position: relative;
+  z-index: 2;
+  filter: grayscale(0.4) contrast(1.1) brightness(0.85) sepia(0.15);
+  transition: filter 0.6s ease;
+}
+
+.about-frame:hover .about-photo {
+  filter: grayscale(0.15) contrast(1.1) brightness(0.9) sepia(0.08);
+}
+
+.about-photo-credit {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin-top: 16px;
+  line-height: 1.5;
+  opacity: 0.92;
+  text-align: left;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.stat {
+  text-align: center;
+  padding: 24px 0;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  transition: border-color 0.3s;
+}
+
+.stat:hover { border-color: var(--accent); }
+
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+.stat-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin-top: 4px;
+  font-weight: 300;
+}
+
+.about-right {
+  padding-top: 8px;
+  max-width: 40rem;
+}
+
+.about-lede {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2.4vw, 1.65rem);
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: var(--fg);
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-text {
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--fg-dim);
+  line-height: 1.82;
+  margin-bottom: 1.35em;
+  letter-spacing: 0.01em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.about-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-text--en {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: rgba(240, 236, 228, 0.62);
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(200, 168, 124, 0.45);
+}
+
+.about-text strong {
+  color: var(--fg);
+  font-weight: 400;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 40px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+.tag {
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--fg-dim);
+  transition: all 0.3s;
+  background: transparent;
+}
+
+.tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+/* ═══ CONTACT ═══ */
+.contact {
+  padding: 140px 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-lead {
+  max-width: 32rem;
+  margin: 0 auto 32px;
+}
+
+.contact-lead-line {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.08rem, 2.1vw, 1.38rem);
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(240, 236, 228, 0.9);
+  line-height: 1.48;
+  letter-spacing: 0.025em;
+}
+
+.contact-lead-line + .contact-lead-line {
+  margin-top: 8px;
+}
+
+.contact-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 40px;
+  opacity: 0.85;
+}
+
+.contact-email {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(24px, 4vw, 48px);
+  letter-spacing: 4px;
+  color: var(--fg);
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s;
+  margin-bottom: 16px;
+}
+
+.contact-email:hover { color: var(--accent); }
+
+.contact-email::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 100%; height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact-email:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ═══ BACK TO TOP ═══ */
+.to-top {
+  position: fixed;
+  right: max(20px, 2.5vw);
+  bottom: max(24px, 3vh);
+  z-index: 8500;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1;
+  color: rgba(240, 236, 228, 0.38);
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.45s ease, visibility 0.45s ease, color 0.3s ease;
+  padding: 8px;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.to-top:hover {
+  color: rgba(200, 168, 124, 0.85);
+}
+
+@media (max-width: 900px) {
+  .to-top {
+    font-size: 22px;
+    right: 16px;
+    bottom: 20px;
+  }
+}
+
+.contact-phone {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: var(--fg-dim);
+  font-weight: 300;
+  margin-bottom: 56px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.contact-phone:hover { color: var(--accent); }
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.social-link {
+  color: var(--fg-dim);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+  transition: color 0.3s;
+  padding-top: 12px;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social-link:hover { color: var(--accent); }
+.social-link:hover::before { opacity: 1; }
+
+/* ═══ FOOTER ═══ */
+footer {
+  padding: 48px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--fg-dim);
+  font-weight: 300;
+}
+
+.footer-right {
+  font-size: 10px;
+  color: rgba(138,133,126,0.5);
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+/* ═══ SCROLL ANIMATIONS ═══ */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+.reveal-stagger > .stagger-item {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-stagger.is-visible > .stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.is-visible > .stagger-item:nth-child(1) { transition-delay: 0.05s; }
+.reveal-stagger.is-visible > .stagger-item:nth-child(2) { transition-delay: 0.14s; }
+.reveal-stagger.is-visible > .stagger-item:nth-child(3) { transition-delay: 0.23s; }
+.reveal-stagger.is-visible > .stagger-item:nth-child(4) { transition-delay: 0.32s; }
+.reveal-stagger.is-visible > .stagger-item:nth-child(5) { transition-delay: 0.41s; }
+.reveal-stagger.is-visible > .stagger-item:nth-child(6) { transition-delay: 0.5s; }
+.reveal-stagger.is-visible > .stagger-item:nth-child(7) { transition-delay: 0.59s; }
+.reveal-stagger.is-visible > .stagger-item:nth-child(8) { transition-delay: 0.68s; }
+.reveal-stagger.is-visible > .stagger-item:nth-child(9) { transition-delay: 0.77s; }
+.reveal-stagger.is-visible > .stagger-item:nth-child(10) { transition-delay: 0.86s; }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 1024px) {
+  nav { padding: 24px 32px; }
+  .sec-head { padding: 100px 32px 48px; }
+  .films { padding: 0 32px 100px; }
+  .about { padding: 0 32px 100px; }
+  .about-grid { gap: 56px; }
+  .contact { padding: 100px 32px; }
+  .divider { padding: 0 32px; }
+  footer { padding: 36px 32px; }
+}
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .menu-btn { display: flex; }
+
+  nav { padding: 20px 24px; }
+  .sec-head { padding: 80px 24px 40px; }
+  .films { padding: 0 24px 80px; }
+  .film-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .film-info {
+    padding: 16px 10px;
+    gap: 8px;
+  }
+
+  .film-title {
+    font-size: clamp(10px, 2.6vw, 16px);
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .film-meta {
+    font-size: clamp(7px, 1.8vw, 9px);
+    letter-spacing: 1px;
+  }
+
+  .film-arrow {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+
+  .film-arrow svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .film-card:hover .film-thumb img {
+    transform: none;
+    filter: brightness(0.7) contrast(1.05);
+  }
+
+  .works-interlude {
+    margin: 20px 0 14px;
+    padding: 28px 16px;
+  }
+
+  .hero-tag {
+    letter-spacing: 0.03em;
+    font-size: clamp(13px, 3.6vw, 16px);
+    max-width: 22rem;
+    padding: 0 12px;
+  }
+
+  .film-info.film-info-story {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .film-info.film-info-story .film-arrow { align-self: flex-end; margin-top: 8px; }
+
+  .about { padding: 0 24px 80px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-frame { max-width: 400px; margin: 0 auto; }
+
+  .about-photo-credit { text-align: center; }
+
+  .sec-head .sec-title { margin-bottom: 0.12em; }
+  .sec-head .sec-sub { margin-top: 12px; }
+
+  .contact { padding: 80px 24px; }
+  .socials { gap: 32px; }
+
+  .divider { padding: 0 24px; }
+  footer { padding: 32px 24px; flex-direction: column; gap: 12px; text-align: center; }
+
+  .lightbox-close { top: 20px; right: 20px; width: 40px; height: 40px; }
+}
+
+@media (max-width: 768px) {
+  .hero-name {
+    letter-spacing: 2px;
+    font-size: clamp(52px, 16vw, 100px);
+  }
+
+  .sec-head {
+    padding: 72px 20px 28px;
+  }
+
+  .sec-head .sec-sub {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .sec-sub--works {
+    font-size: clamp(14px, 4vw, 17px);
+    line-height: 1.55;
+    margin-top: 14px;
+  }
+
+  .about-lede {
+    font-size: clamp(1.15rem, 4.2vw, 1.4rem);
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+    line-height: 1.4;
+  }
+
+  .about-text {
+    font-size: 14px;
+    line-height: 1.78;
+    margin-bottom: 1.15em;
+  }
+
+  .about-text--en {
+    font-size: 13px;
+    margin-top: 1.35em;
+    margin-bottom: 1.35em;
+    padding-left: 14px;
+  }
+
+  .film-title { font-size: clamp(10px, 2.8vw, 15px); letter-spacing: 1px; }
+  .film-meta { font-size: clamp(7px, 2vw, 9px); letter-spacing: 1px; }
+
+  .film-story-text { font-size: 13px; }
+  .film-story-head { font-size: clamp(1.15rem, 5vw, 1.45rem); }
+
+  .works-interlude-text {
+    font-size: clamp(1.1rem, 4.5vw, 1.45rem);
+  }
+
+  .works-interlude-label {
+    margin-bottom: 12px;
+    letter-spacing: 0.38em;
+  }
+
+  .contact-lead-line {
+    font-size: clamp(1rem, 3.6vw, 1.22rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-label { letter-spacing: 5px; font-size: 10px; }
+  .hero-kr { letter-spacing: 10px; }
+
+  .about-stats { gap: 8px; }
+  .stat-num { font-size: 24px; }
+  .stat { padding: 16px 0; }
+  .about-initials { font-size: 64px; }
+
+  .socials { flex-direction: column; gap: 20px; align-items: center; }
+
+  .film-play { width: 48px; height: 48px; }
+  .film-play svg { width: 16px; height: 16px; }
+
+  .contact-email { letter-spacing: 2px; }
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ═══ PRELOADER ═══ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-line"></div>
+  <div class="preloader-text">DIRECTOR JANG</div>
+</div>
+
+<!-- ═══ CUSTOM CURSOR ═══ -->
+<div class="cursor-outer" id="cursorOuter"><span class="cursor-view-label" aria-hidden="true">VIEW</span></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a href="#top" class="nav-logo">DIRECTOR JANG</a>
+  <ul class="nav-links">
+    <li><a href="#works" data-hover>Works</a></li>
+    <li><a href="#about" data-hover>About</a></li>
+    <li><a href="#contact" data-hover>Contact</a></li>
+  </ul>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══ MOBILE MENU ═══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#works" class="mobile-link">Works</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-content">
+    <p class="hero-label">Film Director & Cinematographer</p>
+    <h1 class="hero-name">DIRECTOR<br>JANG</h1>
+    <p class="hero-kr">장 형 택</p>
+    <p class="hero-tag">
+      <span class="hero-tag-line">Mastering the spectrum of K-content</span>
+      <span class="hero-tag-bar" aria-hidden="true"></span>
+      <span class="hero-tag-line">Connecting local stories to the global stage</span>
+    </p>
+  </div>
+  <div class="scroll-ind">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══ SELECTED WORKS ═══ -->
+<div class="works-region">
+<div class="sec-head reveal-stagger" id="works">
+  <div class="sec-num stagger-item">01</div>
+  <h2 class="sec-title stagger-item">SELECTED WORKS</h2>
+  <p class="sec-sub sec-sub--works stagger-item">The Archive of Visual Narratives &amp; Brand Identities</p>
+</div>
+
+<div class="films">
+  <div class="film-grid">
+
+    <!-- FILM 1 — Wide Featured -->
+    <div class="film-card wide reveal" data-video="6GTM1wuA43o">
+      <div class="film-thumb">
+        <img src="https://img.youtube.com/vi/6GTM1wuA43o/maxresdefault.jpg" alt="Featured Film" loading="eager" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+        <div class="film-overlay"></div>
+        <div class="film-play">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <div>
+          <div class="film-title">(G)I-DLE — "I WANT THAT" M/V BTS</div>
+          <div class="film-meta">Director · Cinematography · Edit</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
+    <!-- FILM 2 -->
+    <div class="film-card reveal reveal-delay-1" data-video="2sxW6uw1DJI">
+      <div class="film-thumb">
+        <img src="https://img.youtube.com/vi/2sxW6uw1DJI/maxresdefault.jpg" alt="Visual Story" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+        <div class="film-overlay"></div>
+        <div class="film-play">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <div>
+          <div class="film-title">82MAJOR — PINTEREST LUV MV</div>
+          <div class="film-meta">Direction · Production</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
+    <!-- FILM 3 -->
+    <div class="film-card reveal reveal-delay-2" data-video="28vbQvF6Gfg">
+      <div class="film-thumb">
+        <img src="https://img.youtube.com/vi/28vbQvF6Gfg/maxresdefault.jpg" alt="Visual Story" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+        <div class="film-overlay"></div>
+        <div class="film-play">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <div>
+          <div class="film-title">VVS — DIAMONDS IN MY MOUTH</div>
+          <div class="film-meta">Cinematography · Edit</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
+    <!-- FILM 4 — OPPO Reno12 BSS SEVENTEEN -->
+    <div class="film-card reveal reveal-delay-1" data-video="b60hhoNw2ZE">
+      <div class="film-thumb">
+        <img src="https://img.youtube.com/vi/b60hhoNw2ZE/hqdefault.jpg" alt="OPPO Reno12 BSS SEVENTEEN" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/b60hhoNw2ZE/mqdefault.jpg'">
+        <div class="film-overlay"></div>
+        <div class="film-play">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <div>
+          <div class="film-title">OPPO Reno12 BSS SEVENTEEN</div>
+          <div class="film-meta">Cinematography · Edit</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
+    <!-- FILM 5 -->
+    <div class="film-card reveal reveal-delay-2" data-video="T40GmNijonE">
+      <div class="film-thumb">
+        <img src="https://img.youtube.com/vi/T40GmNijonE/maxresdefault.jpg" alt="Visual Story" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+        <div class="film-overlay"></div>
+        <div class="film-play">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <div>
+          <div class="film-title">VVS — SPILL THE TEA (JAPAN)</div>
+          <div class="film-meta">Direction · Edit</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
+    <div class="works-interlude reveal-stagger">
+      <span class="works-interlude-label stagger-item">PERSPECTIVE</span>
+      <p class="works-interlude-text stagger-item">Crafting visual narratives that connect global audiences through the language of K-content.</p>
+    </div>
+
+    <!-- MishMash — Michelin Guide (wide row below OPPO + VVS Spill) -->
+    <div class="film-card wide reveal" data-video="sRqGW6ba2X8">
+      <div class="film-thumb">
+        <img src="images/mishmash_01.png" alt="Michelin Guide Restaurants — MishMash" loading="lazy">
+        <div class="film-overlay"></div>
+        <div class="film-play">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="film-info film-info-story">
+        <div class="film-story-block">
+          <div class="film-story-head film-story-head--compact">Michelin Guide Restaurants &mdash; MishMash</div>
+          <p class="film-story-text">Created promotional videos for Michelin Guide restaurants, emphasizing the culinary artistry and unique dining experiences.</p>
+          <p class="film-story-text">Make branding video for a chef featured in the Netflix &lsquo;CULINARY CLASS WARS&rsquo; series, blending storytelling with sophisticated visuals.</p>
+          <div class="film-story-meta">Production · Cinematography · Edit</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
+    <!-- FILM 6 -->
+    <div class="film-card reveal reveal-delay-1" data-video="QLggmSQPtQo">
+      <div class="film-thumb">
+        <img src="https://img.youtube.com/vi/QLggmSQPtQo/maxresdefault.jpg" alt="Visual Story" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+        <div class="film-overlay"></div>
+        <div class="film-play">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <div>
+          <div class="film-title">남영탉 NAMYEONG CHICKEN — 오준탁 셰프</div>
+          <div class="film-meta">Production · Cinematography · Edit</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
+    <!-- FILM 7 -->
+    <div class="film-card reveal reveal-delay-2" data-video="p9XX5W0ApT4">
+      <div class="film-thumb">
+        <img src="https://img.youtube.com/vi/p9XX5W0ApT4/maxresdefault.jpg" alt="Visual Story" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+        <div class="film-overlay"></div>
+        <div class="film-play">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <div>
+          <div class="film-title">OPPO x BSS OF SEVENTEEN — Q&A</div>
+          <div class="film-meta">Direction · Production</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
+    <!-- FILM 8 — Norway Offshore Wind (Google Drive) -->
+    <div class="film-card wide reveal reveal-delay-2" data-drive="1lO7a0OXkDeBB5mfnICnly0qHq2ra-Jaj">
+      <div class="film-thumb">
+        <img src="images/norway-inc5.png" alt="Norway Offshore Wind Business Forum" loading="lazy">
+        <div class="film-overlay"></div>
+        <div class="film-play">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="film-info film-info-story">
+        <div class="film-story-block">
+          <div class="film-story-head">Norway Offshore Wind Business Forum</div>
+          <p class="film-story-text">Filmed the Norway Offshore Wind Business Forum, highlighting collaboration opportunities between Norway and Korea.</p>
+          <p class="film-story-text">Offshore engineering and marine innovation frame the narrative, underscoring shared momentum across both markets.</p>
+          <div class="film-story-meta">Production · Cinematography · Edit</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- ═══ DIVIDER ═══ -->
+<div class="divider"><div class="div-line"></div></div>
+
+<!-- ═══ ABOUT ═══ -->
+<div class="sec-head reveal-stagger" id="about">
+  <div class="sec-num stagger-item">02</div>
+  <h2 class="sec-title stagger-item">ABOUT</h2>
+  <p class="sec-sub stagger-item">Visualizing the Story, Defining the Impact.</p>
+</div>
+
+<div class="about">
+  <div class="about-grid">
+    <div class="about-left reveal">
+      <div class="about-frame">
+        <img src="images/about-kcontent.png" alt="장형택 감독 프로필" class="about-photo">
+      </div>
+      <p class="about-photo-credit">Photo credits : Bradley Cramp</p>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">K-POP</div>
+          <div class="stat-label">Specialty</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">&infin;</div>
+          <div class="stat-label">Stories</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right reveal-stagger">
+      <p class="about-lede stagger-item">Authentic People, Iconic Artists, and Global Brands</p>
+      <p class="about-text stagger-item">
+        Direction과 Cinematography의 최전선에서 로컬의 서사를 글로벌 스테이지로 연결해 왔습니다. K-pop 아티스트의 다이내믹한 에너지부터 피사체의 깊은 본질까지,<br>
+        <strong>BRIAN JANG</strong>은 감각적인 Visual Language로 대상의 가장 아이코닉한 모먼트를 포착합니다.
+      </p>
+      <p class="about-text stagger-item">
+        광고, 뮤직비디오, 다큐멘터리 등 장르의 경계 없이 기술적 정교함과 서사적 완성도를 구현하며,<br>
+        각 프로젝트에 최적화된 최상의 결과물을 제안합니다.
+      </p>
+      <p class="about-text about-text--en stagger-item" lang="en">
+        Connecting local stories to the global stage through direction and cinematography.
+      </p>
+      <p class="about-text stagger-item">
+        현재 AI 워크플로우를 활용한 영상 제작과 소셜 채널 등 다양한 필름 실험을 지속하고 있으며,<br>
+        새로운 크리에이티브 프로젝트 및 협업에 언제나 열려 있습니다.
+      </p>
+      <div class="tags stagger-item">
+        <span class="tag">Cinematography</span>
+        <span class="tag">Film Direction</span>
+        <span class="tag">Video Editing</span>
+        <span class="tag">K-Pop MV</span>
+        <span class="tag">Documentary</span>
+        <span class="tag">Brand Film</span>
+        <span class="tag">Commercial</span>
+        <span class="tag">Color Grading</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DIVIDER ═══ -->
+<div class="divider"><div class="div-line"></div></div>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact reveal-stagger" id="contact">
+  <div class="sec-num stagger-item" style="justify-content: center;">03</div>
+  <h2 class="sec-title stagger-item" style="margin-bottom: 28px;">GET IN TOUCH</h2>
+  <div class="contact-lead stagger-item">
+    <span class="contact-lead-line">Crafting stories that resonate globally.</span>
+    <span class="contact-lead-line">Open for creative projects and strategic collaborations.</span>
+  </div>
+  <div class="contact-divider stagger-item" aria-hidden="true"></div>
+  <a href="mailto:floodtide@kakao.com" class="contact-email stagger-item" data-hover>floodtide@kakao.com</a>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-left">DIRECTOR JANG · 장형택</div>
+  <div class="footer-right">&copy; 2026 ALL RIGHTS RESERVED</div>
+</footer>
+
+<a href="#top" class="to-top" id="toTop" aria-label="맨 위로">↑</a>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+    <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+  </button>
+  <div class="lightbox-inner">
+    <iframe id="lightboxFrame" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+(function() {
+  'use strict';
+
+  // ── Preloader ──
+  const preloader = document.getElementById('preloader');
+  requestAnimationFrame(() => preloader.classList.add('active'));
+
+  window.addEventListener('load', () => {
+    setTimeout(() => preloader.classList.add('done'), 1800);
+  });
+
+  // ── Custom Cursor ──
+  const cursorOuter = document.getElementById('cursorOuter');
+  const cursorDot = document.getElementById('cursorDot');
+  let mouseX = 0, mouseY = 0;
+  let outerX = 0, outerY = 0;
+
+  if (window.matchMedia('(min-width: 901px)').matches) {
+    document.body.classList.add('custom-cursor-active');
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = mouseX + 'px';
+      cursorDot.style.top = mouseY + 'px';
+    });
+
+    function animateCursor() {
+      outerX += (mouseX - outerX) * 0.12;
+      outerY += (mouseY - outerY) * 0.12;
+      cursorOuter.style.left = outerX + 'px';
+      cursorOuter.style.top = outerY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    function setWorksCursor(on) {
+      cursorOuter.classList.toggle('cursor-view', on);
+      cursorDot.classList.toggle('cursor-dot-hide', on);
+      if (on) cursorOuter.classList.remove('hovering');
+    }
+
+    const worksRegion = document.querySelector('.works-region');
+    if (worksRegion) {
+      worksRegion.addEventListener('mouseenter', () => setWorksCursor(true));
+      worksRegion.addEventListener('mouseleave', () => setWorksCursor(false));
+    }
+
+    document.querySelectorAll('[data-hover], .tag, .stat, .contact-email, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        if (!cursorOuter.classList.contains('cursor-view')) cursorOuter.classList.add('hovering');
+      });
+      el.addEventListener('mouseleave', () => cursorOuter.classList.remove('hovering'));
+    });
+  }
+
+  // ── Mobile Menu ──
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // ── Scroll Reveal ──
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        staggerObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -28px 0px' });
+
+  document.querySelectorAll('.reveal-stagger').forEach(el => staggerObserver.observe(el));
+
+  // ── Lightbox ──
+  const lightbox = document.getElementById('lightbox');
+  const lightboxFrame = document.getElementById('lightboxFrame');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.film-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const videoId = card.dataset.video;
+      const driveId = card.dataset.drive;
+      if (videoId) {
+        lightboxFrame.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      } else if (driveId) {
+        lightboxFrame.src = 'https://drive.google.com/file/d/' + driveId + '/preview';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxFrame.src = '';
+    document.body.style.overflow = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+
+  // ── Smooth Scroll for Nav Links ──
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (href === '#top' || href === '#') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  const toTopBtn = document.getElementById('toTop');
+  function updateToTopVisibility() {
+    if (!toTopBtn) return;
+    toTopBtn.classList.toggle('is-visible', window.scrollY > 1000);
+  }
+  updateToTopVisibility();
+  window.addEventListener('scroll', updateToTopVisibility, { passive: true });
+
+  // ── Parallax Hero on Scroll ──
+  const heroBg = document.querySelector('.hero-bg');
+  const heroContent = document.querySelector('.hero-content');
+  const scrollInd = document.querySelector('.scroll-ind');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const vh = window.innerHeight;
+
+    if (scrollY < vh) {
+      const progress = scrollY / vh;
+      if (heroBg) heroBg.style.transform = 'scale(' + (1 + progress * 0.1) + ') translateY(' + (scrollY * 0.3) + 'px)';
+      if (heroContent) heroContent.style.transform = 'translateY(' + (scrollY * 0.4) + 'px)';
+      if (heroContent) heroContent.style.opacity = 1 - progress * 1.2;
+      if (scrollInd) scrollInd.style.opacity = 1 - progress * 3;
+    }
+  }, { passive: true });
+
+  // ── Nav Background on Scroll ──
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      nav.style.mixBlendMode = 'normal';
+      nav.style.background = 'rgba(0,0,0,0.8)';
+      nav.style.backdropFilter = 'blur(12px)';
+      nav.style.WebkitBackdropFilter = 'blur(12px)';
+    } else {
+      nav.style.mixBlendMode = 'difference';
+      nav.style.background = 'transparent';
+      nav.style.backdropFilter = 'none';
+      nav.style.WebkitBackdropFilter = 'none';
+    }
+  }, { passive: true });
+
+})();
+</script>
+
+</body>
+</html>
