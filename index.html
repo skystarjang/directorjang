@@ -148,8 +148,8 @@ img { display: block; max-width: 100%; }
 }
 
 .cursor-outer.cursor-view {
-  width: 76px;
-  height: 76px;
+  width: 38px;
+  height: 38px;
   mix-blend-mode: normal;
   background: rgba(10, 10, 10, 0.65);
   border-color: rgba(200, 168, 124, 0.55);
@@ -160,8 +160,8 @@ img { display: block; max-width: 100%; }
 .cursor-view-label {
   position: absolute;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 9px;
-  letter-spacing: 0.35em;
+  font-size: 7px;
+  letter-spacing: 0.2em;
   color: var(--fg);
   opacity: 0;
   transform: scale(0.85);
@@ -658,6 +658,12 @@ nav {
   margin-left: 3px;
 }
 
+.film-play-lock svg {
+  fill: none;
+  stroke: var(--fg);
+  margin-left: 0;
+}
+
 .film-info {
   padding: 24px 28px;
   position: relative;
@@ -879,6 +885,127 @@ nav {
   stroke: var(--fg);
   stroke-width: 1.5;
   fill: none;
+}
+
+/* ═══ RESTRICTED CONTENT (ACCESS GATE) ═══ */
+.access-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 9200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.access-gate.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.access-gate-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.access-gate-dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  padding: 36px 32px 32px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  text-align: center;
+}
+
+.access-gate-x {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--fg-dim);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.access-gate-x:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.access-gate-title {
+  font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--fg);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.access-gate-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0;
+}
+
+.access-gate-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.access-gate-btn {
+  width: 100%;
+  padding: 14px 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.25s, filter 0.25s;
+}
+
+.access-gate-btn:hover {
+  filter: brightness(1.08);
+}
+
+.access-gate-msg {
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--fg-dim);
+}
+
+.access-gate-msg--error {
+  color: rgba(200, 168, 124, 0.95);
+}
+
+.access-gate-msg a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ═══ DIVIDER ═══ */
@@ -1615,6 +1742,24 @@ footer {
       </div>
     </div>
 
+    <!-- K-POP Documentary — restricted Drive -->
+    <div class="film-card wide reveal film-card-restricted">
+      <div class="film-thumb">
+        <img src="/images/kpop-documentary.png" alt="K-POP Documentary exclusive project" loading="lazy">
+        <div class="film-overlay"></div>
+        <div class="film-play film-play-lock" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <div>
+          <div class="film-title">K-POP DOCUMENTARY &middot; EXCLUSIVE PROJECT</div>
+          <div class="film-meta">Direction &middot; Cinematography &middot; Edit</div>
+        </div>
+        <div class="film-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div>
+      </div>
+    </div>
+
     <div class="works-interlude reveal-stagger">
       <span class="works-interlude-label stagger-item">PERSPECTIVE</span>
       <p class="works-interlude-text stagger-item">Crafting visual narratives that connect global audiences through the language of K-content.</p>
@@ -1786,6 +1931,18 @@ footer {
 
 <a href="#top" class="to-top" id="toTop" aria-label="맨 위로">↑</a>
 
+<!-- ═══ ACCESS GATE (K-POP Documentary) ═══ -->
+<div class="access-gate" id="accessGate" aria-hidden="true">
+  <div class="access-gate-backdrop" id="accessGateBackdrop"></div>
+  <div class="access-gate-dialog" role="dialog" aria-modal="true" aria-labelledby="accessGateTitle">
+    <button type="button" class="access-gate-x" id="accessGateClose" aria-label="닫기">&times;</button>
+    <p id="accessGateTitle" class="access-gate-title">Restricted Content. 인증 코드를 입력하세요.</p>
+    <input type="text" class="access-gate-input" id="accessGateInput" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="인증 코드" />
+    <button type="button" class="access-gate-btn" id="accessGateSubmit">Enter Key</button>
+    <p class="access-gate-msg access-gate-msg--error" id="accessGateError" hidden>관리자에게 인증 코드를 문의해주세요. <a href="mailto:floodtide@kakao.com">floodtide@kakao.com</a></p>
+  </div>
+</div>
+
 <!-- ═══ LIGHTBOX ═══ -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close">
@@ -1899,8 +2056,59 @@ footer {
   const lightboxFrame = document.getElementById('lightboxFrame');
   const lightboxClose = document.getElementById('lightboxClose');
 
+  const accessGate = document.getElementById('accessGate');
+  const accessGateInput = document.getElementById('accessGateInput');
+  const accessGateSubmit = document.getElementById('accessGateSubmit');
+  const accessGateClose = document.getElementById('accessGateClose');
+  const accessGateBackdrop = document.getElementById('accessGateBackdrop');
+  const accessGateError = document.getElementById('accessGateError');
+  const KPOP_DOC_PASS = 'kpopdocu';
+  const KPOP_DOC_URL = 'https://drive.google.com/file/d/1ql26B6RlgybEHeniBJX1QOmZ2PLmNj2S/view?usp=sharing';
+
+  function openAccessGate() {
+    if (!accessGate) return;
+    accessGate.classList.add('open');
+    accessGate.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (accessGateError) accessGateError.hidden = true;
+    if (accessGateInput) {
+      accessGateInput.value = '';
+      setTimeout(() => accessGateInput.focus(), 100);
+    }
+  }
+
+  function closeAccessGate() {
+    if (!accessGate) return;
+    accessGate.classList.remove('open');
+    accessGate.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (accessGateError) accessGateError.hidden = true;
+    if (accessGateInput) accessGateInput.value = '';
+  }
+
+  function tryAccessGate() {
+    const val = (accessGateInput && accessGateInput.value) ? accessGateInput.value.trim().toLowerCase() : '';
+    if (val === KPOP_DOC_PASS) {
+      closeAccessGate();
+      window.open(KPOP_DOC_URL, '_blank', 'noopener,noreferrer');
+    } else if (accessGateError) {
+      accessGateError.hidden = false;
+    }
+  }
+
+  if (accessGateSubmit) accessGateSubmit.addEventListener('click', tryAccessGate);
+  if (accessGateInput) accessGateInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') tryAccessGate();
+  });
+  if (accessGateClose) accessGateClose.addEventListener('click', closeAccessGate);
+  if (accessGateBackdrop) accessGateBackdrop.addEventListener('click', closeAccessGate);
+
   document.querySelectorAll('.film-card').forEach(card => {
     card.addEventListener('click', () => {
+      if (card.classList.contains('film-card-restricted')) {
+        openAccessGate();
+        return;
+      }
       const videoId = card.dataset.video;
       const driveId = card.dataset.drive;
       if (videoId) {
@@ -1926,7 +2134,12 @@ footer {
     if (e.target === lightbox) closeLightbox();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+    if (e.key !== 'Escape') return;
+    if (accessGate && accessGate.classList.contains('open')) {
+      closeAccessGate();
+      return;
+    }
+    if (lightbox.classList.contains('open')) closeLightbox();
   });
 
   // ── Smooth Scroll for Nav Links ──
