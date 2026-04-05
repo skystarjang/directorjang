@@ -438,6 +438,17 @@ nav {
   color: rgba(240, 236, 228, 0.68);
 }
 
+@keyframes scrollIndIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 .scroll-ind {
   position: absolute;
   bottom: 48px;
@@ -449,7 +460,7 @@ nav {
   align-items: center;
   gap: 12px;
   opacity: 0;
-  animation: heroFadeUp 1s 2s forwards;
+  animation: scrollIndIn 1s 2s forwards;
 }
 
 .scroll-ind span {
@@ -1612,7 +1623,7 @@ footer {
     <!-- MishMash — Michelin Guide (wide row below OPPO + VVS Spill) -->
     <div class="film-card wide reveal" data-video="sRqGW6ba2X8">
       <div class="film-thumb">
-        <img src="images/mishmash_01.png" alt="Michelin Guide Restaurants — MishMash" loading="lazy">
+        <img src="/images/mishmash_01.png" alt="Michelin Guide Restaurants — MishMash" loading="lazy">
         <div class="film-overlay"></div>
         <div class="film-play">
           <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
@@ -1668,7 +1679,7 @@ footer {
     <!-- FILM 8 — Norway Offshore Wind (Google Drive) -->
     <div class="film-card wide reveal reveal-delay-2" data-drive="1lO7a0OXkDeBB5mfnICnly0qHq2ra-Jaj">
       <div class="film-thumb">
-        <img src="images/norway-inc5.png" alt="Norway Offshore Wind Business Forum" loading="lazy">
+        <img src="/images/norway-inc5.png" alt="Norway Offshore Wind Business Forum" loading="lazy">
         <div class="film-overlay"></div>
         <div class="film-play">
           <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
@@ -1703,7 +1714,7 @@ footer {
   <div class="about-grid">
     <div class="about-left reveal">
       <div class="about-frame">
-        <img src="images/about-kcontent.png" alt="장형택 감독 프로필" class="about-photo">
+        <img src="/images/about-kcontent.png" alt="장형택 감독 프로필" class="about-photo">
       </div>
       <p class="about-photo-credit">Photo credits : Bradley Cramp</p>
       <div class="about-stats">
